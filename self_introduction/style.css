@@ -1,0 +1,278 @@
+html{
+  margin: 0;
+  padding: 0;
+ background-color:#333;
+
+}
+
+.video-hero{
+  height: 100vh;
+  margin-bottom: 1rem;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+.text{
+  font-size: 4rem;
+  opacity: 0.8;
+  position: absolute;
+  top:33rem;
+  left: 4rem;
+  font-family: 'Viaoda Libre', cursive;
+}
+
+.video-hero--content {
+  position: relative;
+  text-align: center;
+  color: #FFF;
+  margin: 200px 0;
+}
+
+.video-hero--content h1 {
+  font-size: 150px;
+  margin:auto auto;
+  opacity: 0.8;
+  font-family: 'Prata', serif;
+  font-family: 'Viaoda Libre', cursive;
+
+    color: #333;
+    letter-spacing: 5px;
+    text-align: center;
+  
+    animation: move linear 2000ms infinite;  
+  }
+  
+  @keyframes move {
+    0% {
+      text-shadow:
+        4px -4px 0 rgb(255, 102, 0), 
+        3px -3px 0 rgb(255, 102, 0),  
+        2px -2px 0 rgb(255, 102, 0), 
+        1px -1px 0 rgb(255, 102, 0), 
+        -4px 4px 0 rgb(0, 128, 255), 
+        -3px 3px 0 rgb(0, 128, 255), 
+        -2px 2px 0 rgb(0, 128, 255), 
+        -1px 1px 0 rgb(0, 128, 255)
+      ;
+  
+    }
+    25% {    
+      text-shadow:      
+      -4px 4px 0 rgb(0, 128, 255), 
+      -3px 3px 0 rgb(0, 128, 255), 
+      -2px 2px 0 rgb(0, 128, 255), 
+      -1px 1px 0 rgb(0, 128, 255), 
+        4px 4px 0 rgb(255, 102, 0), 
+        3px 3px 0 rgb(255, 102, 0), 
+        2px 2px 0 rgb(255, 102, 0), 
+        1px 1px 0 rgb(255, 102, 0)
+      ;
+
+    }
+    50% {
+      text-shadow:
+        -4px 4px 0 rgb(255, 102, 0), 
+        -3px 3px 0 rgb(255, 102, 0),  
+        -2px 2px 0 rgb(255, 102, 0), 
+        -1px 1px 0 rgb(255, 102, 0), 
+        -4px 4px 0 rgb(0, 128, 255), 
+        -3px 3px 0 rgb(0, 128, 255), 
+        -2px 2px 0 rgb(0, 128, 255), 
+        -1px 1px 0 rgb(0, 128, 255)
+        ;
+    
+    }
+    75% {
+      text-shadow:
+      -4px 4px 0 rgb(0, 128, 255), 
+      -3px 3px 0 rgb(0, 128, 255), 
+      -2px 2px 0 rgb(0, 128, 255), 
+      -1px 1px 0 rgb(0, 128, 255), 
+        -4px -4px 0 rgb(255, 102, 0), 
+        -3px -3px 0 rgb(255, 102, 0), 
+        -2px -2px 0 rgb(255, 102, 0), 
+        -1px -1px 0 rgb(255, 102, 0)  
+      ;
+      
+    }
+    100% {
+      text-shadow:
+        4px -4px 0 rgb(255, 102, 0), 
+        3px -3px 0 rgb(255, 102, 0), 
+        2px -2px 0 rgb(255, 102, 0), 
+        1px -1px 0 rgb(255, 102, 0), 
+        -4px 4px 0 rgb(0, 128, 255), 
+        -3px 3px 0 rgb(0, 128, 255), 
+        -2px 2px 0 rgb(0, 128, 255), 
+        -1px 1px 0 rgb(0, 128, 255)
+      ;
+    }  
+  }
+
+
+
+@media (max-width: 670px)
+{
+  .video-hero--content h1 {
+    font-size: 100px;
+  }
+}
+
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.jquery-background-video-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jquery-background-video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+
+.js .jquery-background-video {
+  opacity: 0;
+  transition: opacity 300ms linear;
+}
+
+.js .jquery-background-video.is-visible {
+  opacity: 1;
+}
+
+.jquery-background-video-pauseplay {
+  position: absolute;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+  cursor: pointer;
+  outline: none !important;
+}
+
+.jquery-background-video-pauseplay span {
+  display: none;
+}
+
+.jquery-background-video-pauseplay:after,
+.jquery-background-video-pauseplay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease;
+}
+
+.jquery-background-video-pauseplay.play:before {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #FFF;
+}
+
+.jquery-background-video-pauseplay.pause:before,
+.jquery-background-video-pauseplay.pause:after {
+  border-top: 10px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 10px solid rgba(255, 255, 255, 0.8);
+  border-left: 5px solid rgba(255, 255, 255, 0.8);
+}
+
+.jquery-background-video-pauseplay.pause:after {
+  left: 10px;
+}
+
+/*typed*/
+
+#ityped{
+  font-size: 4rem;
+  font-family: 'Viaoda Libre', cursive;
+  opacity: 0.8;
+position: absolute;
+top:40rem;
+left:4rem;
+
+}
+
+
+@keyframes blink {
+  100% {
+      opacity: 0;
+  }
+}
+
+
+
+
+.content{
+  margin: 1rem auto;
+  text-align: center;
+  width: auto;
+  height: 100%;
+  display: block;
+}
+
+.content h1{
+  font-size:60px;
+  font-family: 'Viaoda Libre', cursive;
+  color:rgb(255, 102, 0) ;
+}
+
+.icon{
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  width: 300px;
+  height: 300px;
+}
+
+.content h2{
+  font-size:30px;
+  font-family: 'Viaoda Libre', cursive;
+  margin: 3rem auto;
+  color:rgb(0, 128, 255) ;
+}
+
+
+.list{
+  list-style-type: none;
+  margin: 1rem auto;
+}
+
+
+footer{
+  margin: 2rem auto;
+  text-align: center;
+  opacity: 0.7;
+}
