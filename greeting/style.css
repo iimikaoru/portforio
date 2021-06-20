@@ -1,0 +1,36 @@
+html{
+    margin: 0;
+    padding: 0;
+    margin:5rem auto;
+}
+
+
+p {
+    writing-mode: tb-rl;
+    font: bold 200%/150% serif;
+    font-family: MyFont;
+    text-align: center;
+    margin: 1rem auto;
+
+    }
+   @font-face {
+        font-family: 'MyFont';
+        src: url("./851MkPOP_100.ttf");
+   }
+
+
+   img{
+       width: 3rem;
+       height: 3rem;
+        transform: rotate(-14deg);
+   }
+
+   @media (max-width: 480px) {
+
+       img{
+        width: 2rem;
+        height: 2rem;
+       }
+
+   }
+   
